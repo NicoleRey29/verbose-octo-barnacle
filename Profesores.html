@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "menu menu"
+                "profesores selector"
+                "materias selector"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+        }
+		
+
+        header {
+            grid-area: header;
+            background-color: red;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        .buscador {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .menu {
+            grid-area: menu;
+            display: flex;
+            justify-content: space-around;
+            background-color: red;
+            padding: 10px;
+        }
+
+        .menu button {
+            background-color: white;
+            color: red;
+            border: 2px solid red;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .menu button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .profesores {
+            grid-area: profesores;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .profesor {
+            text-align: center;
+        }
+
+        .foto-profesor {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .calificacion {
+            color: gold;
+            font-size: 18px;
+        }
+
+        .materias {
+            grid-area: materias;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .materias input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .selector {
+            grid-area: selector;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .selector h3 {
+            margin-bottom: 15px;
+        }
+
+        .selector ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .selector ul li {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .selector ul li:hover {
+            background-color: red;
+            color: white;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <input type="text" class="buscador" placeholder="Buscador">
+        </header>
+
+        <nav class="menu">
+                       <a href="Perfil.html"><button>Perfil</button></a>
+			<a href="Publicar.html"><button>Publicar</button></a>
+			<a href="Profesores.html"><button>Cuatrimestre</button></a>
+            <a href="Foro.html"><button>Foro</button></a>
+			<a href="materia.html"><button>Materia</button></a>
+        </nav>
+
+        <section class="profesores">
+            <div class="profesor">
+                <div class="foto-profesor"></div>
+                <p>Profesor</p>
+                <p class="calificacion">★★★★★</p>
+            </div>
+            <div class="profesor">
+                <div class="foto-profesor"></div>
+                <p>Profesor</p>
+                <p class="calificacion">★★★★★</p>
+            </div>
+            <div class="profesor">
+                <div class="foto-profesor"></div>
+                <p>Profesor</p>
+                <p class="calificacion">★★★★★</p>
+            </div>
+        </section>
+
+        <section class="materias">
+            <label for="materia">Materias</label>
+            <input type="text" id="materia" placeholder="Ingrese materia">
+            
+            
+        </section>
+
+        <aside class="selector">
+          <h3>Cuatrimestres</h3>
+            <ul>
+                <li>Primer Cuatrimestre</li>
+                <li>Segundo Cuatrimestre</li>
+                <li>Tercer Cuatrimestre</li>
+                <li>Cuarto Cuatrimestre</li>
+                <li>Quinto Cuatrimestre</li>
+                <li>Sexto Cuatrimestre</li>
+                <li>Séptimo Cuatrimestre</li>
+                <li>Octavo Cuatrimestre</li>
+            </ul>
+        </aside>
+
+        <footer>
+            <p>Footer de la página</p>
+        </footer>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiWeb UVM</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ED0000; /* Fondo rojo para que no haya franjas blancas */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* Contenedor principal que ocupa toda la pantalla */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #ED0000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .search-bar {
+            background-color: #fff;
+            padding: 5px;
+            font-size: 12pt;
+            border-radius: 5px;
+            border: none;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px;
+        }
+
+        nav button {
+            background-color: #ED0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 10pt;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: #FF4500;
+        }
+
+        /* Sección de contenido */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            margin: 10px;
+            color: black;
+        }
+
+        .left-panel {
+            width: 70%;
+            background-color: #FFFFFF;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .right-panel {
+            width: 20%;
+            background-color: #ED0000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .right-panel .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+			color:white;
+        }
+
+        .year, .month {
+            background-color: #FFFFFF;
+            color: #ED0000;
+            text-align: center;
+            padding: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .month:hover, .year:hover {
+            background-color: #801313
+        }
+
+        .activity {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #ED0000;
+            border-radius: 10px;
+        }
+
+        .activity img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .folders {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .folder {
+            background-color: #E0E0E0;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .comments {
+            border-top: 2px solid #ED0000;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+
+        .comments textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+        }
+
+        .add-comment {
+            background-color: #ED0000;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-comment:hover {
+            background-color: #FF4500;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">WikiWeb UVM</div>
+            <input type="text" class="search-bar" placeholder="Buscador">
+        </header>
+
+        <nav>
+            <a href="Perfil.html"><button>Perfil</button></a>
+			<a href="Publicar.html"><button>Publicar</button></a>
+			<a href="Profesores.html"><button>Cuatrimestre</button></a>
+            <a href="Foro.html"><button>Foro</button></a>
+			<a href="materia.html"><button>Materia</button></a>
+        </nav>
+
+        <div class="main-content">
+            <!-- Panel izquierdo -->
+            <div class="left-panel">
+                <div class="activity">
+                    <h2>Actividad: 1 Foro de trabajo Lenguajes de progamación</h2>
+                    <p><strong>Fecha: 24 DE OCT 2024</strong></p>
+                    <img src="perfil.jfif" alt="Actividad Imagen" width="182" height="176">
+                    <p>Bienvenido a tu asignatura.</p>
+                </div>
+
+                <div class="folders">
+                    <div class="folder">A1</div>
+                    <div class="folder">A2</div>
+                    <div class="folder">A3</div>
+                    <div class="folder">A4</div>
+                    <div class="folder">A5</div>
+                </div>
+
+                <div class="comments">
+                    <h3>Comentarios</h3>
+                    <textarea rows="5" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button class="add-comment">Agregar Comentario</button>
+                </div>
+            </div>
+
+            <!-- Panel derecho -->
+            <div class="right-panel">
+                <div class="section-title">AÑO</div>
+                <div class="year">2024</div>
+                <div class="year">2023</div>
+                <div class="year">2022</div>
+                <div class="year">2021</div>
+
+                <div class="section-title">MES</div>
+                <div class="month">SEP</div>
+                <div class="month">AGO</div>
+                <div class="month">JUL</div>
+                <div class="month">JUN</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

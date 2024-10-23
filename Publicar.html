@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Dudas</title>
+    <link rel="stylesheet" href="Publicar.css">
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-links">
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="Publicar.html">Publicar</a></li>
+            <li><a href="Profesores.html">Cuatrimestre</a></li>
+            <li><a href="Foro.html">Foro</a></li>
+			<li><a href="materia.html">Materia</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+    </nav>
+
+    <!-- Sección de publicación -->
+    <div class="container">
+        <h1>¿Qué deseas publicar?</h1>
+        <form>
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" class="input-small">
+
+            <label for="motivo">Escribe tu motivo:</label>
+            <textarea id="motivo" name="motivo" class="input-large"></textarea>
+
+            <button type="submit" class="submit-btn">Publicar</button>
+        </form>
+    </div>
+
+</body>
+</html>
